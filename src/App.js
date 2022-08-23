@@ -60,13 +60,13 @@ return (
 			<div className="wrapper">
 				<Routes>
           <Route exact path="/"
-            element={CreateStudent} />
+            element={<CreateStudent />} />
           <Route path="/create-student"
-            element={CreateStudent} />
+            element={<CreateStudent />} />
           <Route path="/edit-student/:id"
-            element={EditStudent} />
+            element={<EditStudent />} />
           <Route path="/student-list"
-            element={StudentList} />
+            element={<StudentList />} />
 				</Routes>
 			</div>
 			</Col>

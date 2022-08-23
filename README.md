@@ -11,3 +11,15 @@ export 'Switch' (imported as 'Switch') was not found in 'react-router-dom' (poss
 
 Replaced 'Switch' with 'Routes' due to changes in react-router-dom v6 from v5.
 
+Compiled successfully! 
+
+Browser displays the header Navbar but will Not display the form fields in the main content Container.
+
+Console Warning: Matched leaf route at location "/create-student" does not have an element. This means it will render an <Outlet /> with a null value by default resulting in an "empty" page.
+
+app.js = Updated each Route "component" to be "element" for react-router-dom v6.
+
+Error: Warning: Functions are not valid as a React child. This may happen if you return a Component instead of <Component /> from render. Or maybe you meant to call this function rather than return it.
+
+app.js = Forgot to update each Route element to return a Component like element={<CreateStudent />}
+
