@@ -10,8 +10,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
 
 // Import from react-router-dom
-import { BrowserRouter as Router, Switch,
-	Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 // Import other React Component
 import CreateStudent from
@@ -59,16 +58,16 @@ return (
 		<Row>
 			<Col md={12}>
 			<div className="wrapper">
-				<Switch>
-				<Route exact path="/"
-					component={CreateStudent} />
-				<Route path="/create-student"
-					component={CreateStudent} />
-				<Route path="/edit-student/:id"
-					component={EditStudent} />
-				<Route path="/student-list"
-					component={StudentList} />
-				</Switch>
+				<Routes>
+          <Route exact path="/"
+            component={CreateStudent} />
+          <Route path="/create-student"
+            component={CreateStudent} />
+          <Route path="/edit-student/:id"
+            component={EditStudent} />
+          <Route path="/student-list"
+            component={StudentList} />
+				</Routes>
 			</div>
 			</Col>
 		</Row>
