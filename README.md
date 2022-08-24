@@ -23,3 +23,5 @@ Error: Warning: Functions are not valid as a React child. This may happen if you
 
 app.js = Forgot to update each Route element to return a Component like element={<CreateStudent />}
 
+StudentForm = Added <label htmlFor="Name">Name</label> for each of the 3 form fields.
+            = Removed FormControl from 'import { FormGroup, Button } from "react-bootstrap";' because it was never used. Which caused an esLint warning.
