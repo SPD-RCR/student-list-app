@@ -1,7 +1,7 @@
 import React from "react";
 import * as Yup from "yup";
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import { FormGroup, FormControl, Button } from "react-bootstrap";
+import { FormGroup, Button } from "react-bootstrap";
 
 const StudentForm = (props) => {
 const validationSchema = Yup.object().shape({
@@ -20,6 +20,7 @@ return (
 	<Formik {...props} validationSchema={validationSchema}>
 		<Form>
 		<FormGroup>
+      <label htmlFor="name">Name</label>
 			<Field name="name" type="text"
 				className="form-control" />
 			<ErrorMessage
@@ -29,6 +30,7 @@ return (
 			/>
 		</FormGroup>
 		<FormGroup>
+      <label htmlFor="email">Email</label>
 			<Field name="email" type="text"
 				className="form-control" />
 			<ErrorMessage
@@ -38,6 +40,7 @@ return (
 			/>
 		</FormGroup>
 		<FormGroup>
+      <label htmlFor="rollno">Rollno</label>
 			<Field name="rollno" type="number"
 				className="form-control" />
 			<ErrorMessage
