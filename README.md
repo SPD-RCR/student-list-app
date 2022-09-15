@@ -54,4 +54,13 @@ Uncaught TypeError: Cannot read properties of undefined (reading 'params')
     at edit-student.component.js:35:1
     at commitHookEffectListMount (react-dom.development.js:23150:1)
 
-    
+    edit-student.component.js
+    Refactoring required due to changes in React Router v6 related to React Hooks in React v16.8
+    See react-router/docs Upgrading from v5 = https://github.com/remix-run/react-router/blob/main/docs/upgrading/v5.md#advantages-of-route-element
+    - useParams instead of passing (props)
+    - Routes and Links are now relative
+      - don't need match.url or match.path
+    - useNavigate instead of useHistory
+
+    Replaced "props.match.params.id" with "_id"
+    Replaced route redirects like "props.history.push("/student-list")" with "navigate("/student-list")"
