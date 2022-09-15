@@ -64,3 +64,10 @@ Uncaught TypeError: Cannot read properties of undefined (reading 'params')
 
     Replaced "props.match.params.id" with "_id"
     Replaced route redirects like "props.history.push("/student-list")" with "navigate("/student-list")"
+
+UX Update = Added useNavigate to create-student.component.js
+    - After a new student was created there was a confirmation alert but the data fields remained populated, which created confusion. 
+      - Do I manually delete the data in each field to create a new student? 
+      - Did the data actually get add to the db? 
+      - I had to click Student List nav link to visually confirm the new student was added to the db.
+    - UX Fix = After the Confirmation Alert, I used useNavigate (similar to Edit Student page) to automatically redirect the user to the Student List page to see the list of students including the new student they created.
