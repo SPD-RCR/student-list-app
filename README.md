@@ -41,10 +41,11 @@ GeeksforGeeks | [How to build a basic CRUD app with Node.js and ReactJS ?](https
   /Users/robertgeorge2/projects/student-list-app/backend/node_modules/mongoose/lib/index.js:225  
       throw new Error(`\`${key}\` is an invalid option.`);  
       ^  
+        
   Error: `useNewUrlParser` is an invalid option.  
       at Mongoose.set (/Users/robertgeorge2/projects/student-list-app/backend/node_modules/mongoose/lib/index.js:225:11)  
 
-  - Mongoose documentation > [Migrating from 5.x to to 6.x](https://mongoosejs.com/docs/migrating_to_6.html#no-more-deprecation-warning-options)
+  - Mongoose documentation > [Migrating from 5.x to to 6.x](https://mongoosejs.com/docs/migrating_to_6.html#no-more-deprecation-warning-options)  
         "No More Deprecation Warning Options  
         useNewUrlParser, useUnifiedTopology, useFindAndModify, and useCreateIndex are no longer supported options. Mongoose 6 always behaves as if useNewUrlParser, useUnifiedTopology, and useCreateIndex are true, and useFindAndModify is false. Please remove these options from your code."  
 
@@ -65,18 +66,15 @@ GeeksforGeeks | [How to build a basic CRUD app with Node.js and ReactJS ?](https
 
   The CONSOLE listed an ERROR.  
   "Uncaught TypeError: Cannot read properties of undefined (reading 'params') at edit-student.component.js:35:1"  
-
     - edit-student.component.js  
     Refactoring required due to changes in React Router v6 related to React Hooks added in React v16.8  
-    *See react-router/docs [Upgrading from v5](https://github.com/remix-run/react-router/blob/main/docs/upgrading/v5.md#advantages-of-route-element)
-
-      - useParams instead of passing (props)
-      - Routes and Links are now relative
-        - don't need match.url or match.path
-      - useNavigate instead of useHistory
-
-        - Replaced `props.match.params.id` with `_id`
-        - Replaced route redirects like `props.history.push("/student-list")` with `navigate("/student-list")`
+    *See react-router/docs [Upgrading from v5](https://github.com/remix-run/react-router/blob/main/docs/upgrading/v5.md#advantages-of-route-element)  
+      - useParams instead of passing (props)  
+      - Routes and Links are now relative  
+          -- don't need match.url or match.path  
+      - useNavigate instead of useHistory  
+          -- Replaced `props.match.params.id` with `_id`  
+          -- Replaced route redirects like `props.history.push("/student-list")` with `navigate("/student-list")`  
 
 **U** - I can Edit a student.  
 **D** - I can Delete a student.  
