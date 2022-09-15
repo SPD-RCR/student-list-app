@@ -25,3 +25,33 @@ app.js = Forgot to update each Route element to return a Component like element=
 
 StudentForm = Added <label htmlFor="Name">Name</label> for each of the 3 form fields.
             = Removed FormControl from 'import { FormGroup, Button } from "react-bootstrap";' because it was never used. Which caused an esLint warning.
+
+Terminal:
+[nodemon] starting `node server.js`
+/Users/robertgeorge2/projects/student-list-app/backend/node_modules/mongoose/lib/index.js:225
+    throw new Error(`\`${key}\` is an invalid option.`);
+    ^
+Error: `useNewUrlParser` is an invalid option.
+    at Mongoose.set (/Users/robertgeorge2/projects/student-list-app/backend/node_modules/mongoose/lib/index.js:225:11)
+
+    Mongoose documentation > Migrating from 5.x to to 6.x
+        "No More Deprecation Warning Options
+        useNewUrlParser, useUnifiedTopology, useFindAndModify, and useCreateIndex are no longer supported options. Mongoose 6 always behaves as if useNewUrlParser, useUnifiedTopology, and useCreateIndex are true, and useFindAndModify is false. Please remove these options from your code."
+        https://mongoosejs.com/docs/migrating_to_6.html#no-more-deprecation-warning-options
+
+server.js:11-14 = Removed/Hidden
+// Configure mongoDB Database
+// mongoose.set('useNewUrlParser', true);
+// mongoose.set('useFindAndModify', false);
+// mongoose.set('useCreateIndex', true);
+// mongoose.set('useUnifiedTopology', true);
+
+App loaded.
+I was able to create a new student.
+I was able to view the Student List.
+When I clicked the Edit button next to the most recently added Student I was taken to the edit-student page but it was blank. The CONSOLE listed an ERROR.
+Uncaught TypeError: Cannot read properties of undefined (reading 'params')
+    at edit-student.component.js:35:1
+    at commitHookEffectListMount (react-dom.development.js:23150:1)
+
+    
