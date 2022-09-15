@@ -31,31 +31,30 @@ GeeksforGeeks | [How to build a basic CRUD app with Node.js and ReactJS ?](https
 
   - app.js = Forgot to update each Route element to return a Component like element={<CreateStudent />}  
   
-  StudentForm = Added <label htmlFor="Name">Name</label> for each of the 3 form fields.
+    - StudentForm = Added <label htmlFor="Name">Name</label> for each of the 3 form fields.
             = Removed FormControl from 'import { FormGroup, Button } from "react-bootstrap";' because it was never used. Which caused an esLint warning.
 
 ### Refactoring continued after getting the Back End code set up from the tutorial
 
 4. Terminal:  
-  `[nodemon] starting `node server.js`  
+  [ nodemon ] starting `node server.js`  
   /Users/robertgeorge2/projects/student-list-app/backend/node_modules/mongoose/lib/index.js:225  
-      throw new Error(`\`${key}\` is an invalid option.`);`  
-      ^
-  `Error: `useNewUrlParser` is an invalid option.  
-      at Mongoose.set (/Users/robertgeorge2/projects/student-list-app/backend/node_modules/mongoose/lib/index.js:225:11)`  
+      throw new Error(`\`${key}\` is an invalid option.`);  
+      ^  
+  Error: `useNewUrlParser` is an invalid option.  
+      at Mongoose.set (/Users/robertgeorge2/projects/student-list-app/backend/node_modules/mongoose/lib/index.js:225:11)  
 
-  - Mongoose documentation > Migrating from 5.x to to 6.x  
+  - Mongoose documentation > [Migrating from 5.x to to 6.x](https://mongoosejs.com/docs/migrating_to_6.html#no-more-deprecation-warning-options)
         "No More Deprecation Warning Options  
         useNewUrlParser, useUnifiedTopology, useFindAndModify, and useCreateIndex are no longer supported options. Mongoose 6 always behaves as if useNewUrlParser, useUnifiedTopology, and useCreateIndex are true, and useFindAndModify is false. Please remove these options from your code."  
-        URL: https://mongoosejs.com/docs/migrating_to_6.html#no-more-deprecation-warning-options
 
     - server.js:11-14 = Remove/Hide  
-
-    `// Configure mongoDB Database  
+  
+    // Configure mongoDB Database  
     // mongoose.set('useNewUrlParser', true);  
     // mongoose.set('useFindAndModify', false);  
     // mongoose.set('useCreateIndex', true);  
-    // mongoose.set('useUnifiedTopology', true);`  
+    // mongoose.set('useUnifiedTopology', true);
 
       - App loaded  
 
@@ -68,7 +67,7 @@ GeeksforGeeks | [How to build a basic CRUD app with Node.js and ReactJS ?](https
   "Uncaught TypeError: Cannot read properties of undefined (reading 'params') at edit-student.component.js:35:1"  
 
     - edit-student.component.js  
-    Refactoring required due to changes in **React Router v6** related to React Hooks added in **React v16.8**  
+    Refactoring required due to changes in React Router v6 related to React Hooks added in React v16.8  
     *See react-router/docs [Upgrading from v5](https://github.com/remix-run/react-router/blob/main/docs/upgrading/v5.md#advantages-of-route-element)
 
       - useParams instead of passing (props)
