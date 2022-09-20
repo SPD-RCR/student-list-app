@@ -69,10 +69,9 @@ After I updated the code for the app to work locally a developer friend reminded
 **U** - I can Edit a student.  
 **D** - I can Delete a student.  
 
-3. **UX Update**  
-    User Confusion = After a new student is created there is a Confirmation Alert but the user remains on the Create Student page and the form data fields remain populated?   
-      - Due to the student data remaining in the form fields after submitting I was unsure if the new student data was actually added to the Student List/database?  
-      - Should I manually delete the data in each field to create another new student or will that update/replace the data for the new student I just created?  
-      - I had to click the "Student List" nav link to visually confirm the new student was added to the Student List/database.  
+### **User Experience:** 
+After a new student is submitted there is a Confirmation Alert but the user remains on the Create Student page and the form data fields remain populated.   
+- Should I manually delete the data in each field to create another new student or will that update/replace the data for the new student I just created?  
+- I clicked the "Student List" nav link to visually confirm the new student was added to the Student List/database.  
 
-        - create-student.component.js = After the Confirmation Alert, I added `useNavigate` (similar to what I did on the Edit Student page) to automatically redirect the user to the Student List page to see the list of students, including the new student that was just added.  
+  - create-student.component.js = After the Confirmation Alert, I added `useNavigate` (similar to what I did on the Edit Student page) to automatically redirect the user to the Student List page to see the list of students, including the new student that was just added.  
