@@ -54,18 +54,17 @@ After I updated the code for the app to work locally a developer friend reminded
 **R** - I can Read the Student List.  
 
 2. When I clicked the "Edit" button next to a student on the Student List page I was taken to the Edit Student page but it was blank?  
-
-  The CONSOLE listed an ERROR.  
+  - The CONSOLE listed an ERROR.  
   "Uncaught TypeError: Cannot read properties of undefined (reading 'params') at edit-student.component.js:35:1"  
-  - edit-student.component.js  
-    Refactoring required due to changes in *React Router v6* related to **React Hooks** (added in *React v16.8*)  
-    - React-Router Advantages of route element => [Upgrading from v5](https://github.com/remix-run/react-router/blob/main/docs/upgrading/v5.md#advantages-of-route-element)  
+
+    - edit-student.component.js = Refactoring required due to changes in *React Router v6* related to **React Hooks** (added in *React v16.8*)  
+    React-Router: Advantages of route element => [Upgrading from v5](https://github.com/remix-run/react-router/blob/main/docs/upgrading/v5.md#advantages-of-route-element)  
       - `useParams` instead of passing `(props)`  
       - `Routes` and `Links` are now relative  
-          -- `match.url` or `match.path` = NOT neded  
+          - `match.url` or `match.path` = NOT neded  
       - `useNavigate` instead of `useHistory`  
-          -- Replaced `props.match.params.id` with `_id`  
-          -- Replaced route redirects like `props.history.push("/student-list")` with `navigate("/student-list")`  
+          - Replaced `props.match.params.id` with `_id`  
+          - Replaced Route redirects like `props.history.push("/student-list")` with `navigate("/student-list")`  
 
 **U** - I can Edit a student.  
 **D** - I can Delete a student.  
