@@ -43,7 +43,7 @@ After I updated the code for the app to work locally a developer friend reminded
         "No More Deprecation Warning Options  
         useNewUrlParser, useUnifiedTopology, useFindAndModify, and useCreateIndex are no longer supported options. Mongoose 6 always behaves as if useNewUrlParser, useUnifiedTopology, and useCreateIndex are true, and useFindAndModify is false. Please remove these options from your code."  
 
-    - server.js:11-14 = Remove/Hide the following because they are Not needed
+    - server.js:11-14 = Remove/Hide the following because they are Not needed  
     // Configure mongoDB Database  
     // mongoose.set('useNewUrlParser', true);  
     // mongoose.set('useFindAndModify', false);  
