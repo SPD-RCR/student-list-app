@@ -1,6 +1,6 @@
-# student-list-app = Refactoring a React MERN stack CRUD app from React v15 to v18.2
+# student-list-app = Refactoring a React MERN stack CRUD app from React v15 to v18.2 and React Router Dom v5 to v6
 
-This **Refactoring** project came about because the React MERN stack CRUD app tutorial I was following was NOT working locally on my Mac. Eventually I figured out that despite the date *"Last Updated: 10 Apr, 2022"* the code was actually not updated to work with the current versions of *React* and *React Router*.  
+This **Refactoring** project came about because the React MERN stack CRUD app tutorial I was following was NOT working locally on my Mac. Eventually I figured out that despite the date *"Last Updated: 10 Apr, 2022"* the code was actually not updated to work with the current versions of *React* and *React Router Dom*.  
 
 Meaning, the ***npm install*** references were ***generic*** instead of including the specific version numbers for the app to work, without refactoring, when installed at a later date.  
 
